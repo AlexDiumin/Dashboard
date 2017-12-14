@@ -26,6 +26,18 @@ public class App
     public static void main( String[] args ){
     	SpringApplication.run(App.class, args);
     	
+//    	Lesson lesson = new Lesson();
+//   	 lesson.setGroup("group");
+//   	 lesson.setLength(22l);
+//   	 lesson.setLessonStart(0l);
+//   	 lesson.setRoom("room");
+//   	 lesson.setSubject("subject");
+//   	 lesson.setTeacher("The Teacher");
+//   	 lesson.setDescription("asd");
+//    	Gson g = new Gson();
+//    	String lg = g.toJson(lesson);
+//    	System.out.println(lg);
+    	
 
     }
 }

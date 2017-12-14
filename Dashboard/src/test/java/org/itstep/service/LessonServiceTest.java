@@ -26,14 +26,14 @@ public class LessonServiceTest {
 
 	// Lesson creator
 	// Lesson lesson = new Lesson();
-	// lesson.setLessonId(1l);
-	// lesson.setGroup("group");
-	// lesson.setLength(22l);
-	// lesson.setLessonStart(0l);
-	// lesson.setRoom("room");
-	// lesson.setSubject("subject");
-	// lesson.setTeacher("The Teacher");
-	// lesson.setDescription(" ");
+	//	 lesson.setLessonId(1l);
+	//	 lesson.setGroup("group");
+	//	 lesson.setLength(22l);
+	//	 lesson.setLessonStart(0l);
+	//	 lesson.setRoom("room");
+	//	 lesson.setSubject("subject");
+	//	 lesson.setTeacher("The Teacher");
+	//	 lesson.setDescription(" ");
 
 	@Autowired
 	LessonServiceImpl lessonServiceImpl;

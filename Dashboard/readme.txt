@@ -1,2 +1,2 @@
-DB: POSTGRESQL !!!
-v1.4 Beta
+DB: postgresql 
+v1.5 not working as needed
