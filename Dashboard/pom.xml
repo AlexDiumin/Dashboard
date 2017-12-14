@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.itstep</groupId>
-  <artifactId>FinalPrj</artifactId>
+  <artifactId>Dashboard</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
 
@@ -12,7 +12,7 @@
   <properties>
 
 		<jdk.version>1.8</jdk.version>
-        <jre.version>1.8.0_144</jre.version>
+        <jre.version>1.8.0_152</jre.version>
         
         <product.version>0.1-SNAPSHOT</product.version>
         <lib.property>lib</lib.property>
@@ -97,9 +97,18 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <configuration>
-                    <source>2.2</source>
-                    <target>2.2</target>
-                </configuration>
+                <failOnMissingWebXml>false</failOnMissingWebXml>
+                <webappDirectory>${project.build.directory}/${project.artifactId}</webappDirectory>
+                <warName>${project.artifactId}</warName>
+                <archive>
+                    <addMavenDescriptor>false</addMavenDescriptor>
+                    <manifest>
+                        <addClasspath>false</addClasspath>
+                    </manifest>
+                    <manifestEntries/>
+                    <manifestFile/>
+                </archive>
+            </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -238,12 +247,12 @@
     		<artifactId>HikariCP</artifactId>
     		<version>2.6.1</version>
 		</dependency>
-		
 		<dependency>
-    		<groupId>org.postgresql</groupId>
-    		<artifactId>postgresql</artifactId>
-    		<version>42.1.1</version>
+	    	<groupId>org.postgresql</groupId>
+	    	<artifactId>postgresql</artifactId>
+   	 		<version>42.1.4</version>
 		</dependency>
+		
 
 	
   		<dependency>
@@ -252,12 +261,13 @@
     		<version>1.4.195</version>
 		</dependency>
   		
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
-            <scope>provided</scope>
-        </dependency>
+		<dependency> 
+			<groupId>org.projectlombok</groupId> 
+			<artifactId>lombok</artifactId>
+			<version>1.16.16</version>
+    		<scope>system</scope>
+    		<systemPath>${basedir}/lib/lombok-1.16.16.jar</systemPath>
+		</dependency>
 
         <dependency>
             <groupId>io.springfox</groupId>
